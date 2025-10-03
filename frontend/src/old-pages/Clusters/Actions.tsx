@@ -72,7 +72,7 @@ export default function Actions() {
   const ssmEnabled = iamPolicies && findFirst(iamPolicies, isSsmPolicy)
 
   const isHeadNode =
-    headNode && headNode.publicIpAddress && headNode.publicIpAddress !== ''
+    headNode
   const isEditDisabled =
     clusterStatus === ClusterStatus.CreateInProgress ||
     clusterStatus === ClusterStatus.DeleteInProgress ||
